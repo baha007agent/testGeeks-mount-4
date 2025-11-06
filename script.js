@@ -8,8 +8,6 @@ const containsOnlyDigits = (str) => {
   console.log(regExp.test(str));
 }
 
-containsOnlyDigits("23")
-
 // console.log(containsOnlyDigits("12345")); // Выведет true
 // console.log(containsOnlyDigits("12a45")); // Выведет false
 // Количество баллов за задачу: 7
@@ -18,6 +16,12 @@ containsOnlyDigits("23")
 // 2) Напишите функцию, которая каждую секунду выводит в консоль сообщение "Прошла секунда".Используйте setInterval
 
 // Пример вывода:
+
+let i = 0
+setInterval(() => {
+  i++
+  console.log(`Прошла ${i} секунд`)
+}, 1000);
 
 // console.log("Прошла секунда"); // 1
 // console.log("Прошла секунда"); // 2
