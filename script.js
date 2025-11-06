@@ -47,19 +47,34 @@
 
 // Количество баллов за задачу: 8
 
-// 4) Создать блок 150 на 150 пикселей и получить его через дом элементы при нажатии на которую будет меняться его задний фон при 
+// 4) Создать блок 150 на 150 пикселей и получить его через дом элементы при нажатии на которую будет меняться его задний фон при
 // повторном нажатии будет убираться цвет заднего фона - выполните эту задачу с использованием classList и его методов
 
-const block = document.querySelector(".block")
+// const block = document.querySelector(".block")
 
-block.onclick = () => {
-  block.classList.toggle("active")
-}
+// block.onclick = () => {
+//   block.classList.toggle("active")
+// }
 
 // Количество баллов за задачу: 9
 
 // 5) Отправить GET запрос на такой JSON
 // Пример JSON
+
+const xhr = new XMLHttpRequest()
+xhr.open("GET", "test.json")
+xhr.send()
+
+xhr.onload = () => {
+  if (xhr.status === 200 || xhr.status === 304) {
+    const data = JSON.parse(xhr.response)
+    console.log(data);
+  } else {
+    console.log("Ошибка статус", xhr.status);
+
+  }
+}
+
 
 // {
 //   "key1": "value",
