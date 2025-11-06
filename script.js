@@ -3,10 +3,10 @@
 // пример:
 // const regExp = /Регулярные выражения/
 
-const containsOnlyDigits = (str) => {
-  const regExp = /^\d+$/
-  console.log(regExp.test(str));
-}
+// const containsOnlyDigits = (str) => {
+//   const regExp = /^\d+$/
+//   console.log(regExp.test(str));
+// }
 
 // console.log(containsOnlyDigits("12345")); // Выведет true
 // console.log(containsOnlyDigits("12a45")); // Выведет false
@@ -17,11 +17,11 @@ const containsOnlyDigits = (str) => {
 
 // Пример вывода:
 
-let i = 0
-setInterval(() => {
-  i++
-  console.log(`Прошла ${i} секунд`)
-}, 1000);
+// let i = 0
+// setInterval(() => {
+//   i++
+//   console.log(`Прошла ${i} секунд`)
+// }, 1000);
 
 // console.log("Прошла секунда"); // 1
 // console.log("Прошла секунда"); // 2
@@ -33,21 +33,28 @@ setInterval(() => {
 
 // Пример функции:
 
-const count = () => {
-  let i = 1;
-  const interval = setInterval(() => {
-    if (i <= 10) {
-      console.log(i++);
-    } else {
-      clearInterval(interval)
-    }
-  }, 1000);
-}
-count()
+// const count = () => {
+//   let i = 1;
+//   const interval = setInterval(() => {
+//     if (i <= 10) {
+//       console.log(i++);
+//     } else {
+//       clearInterval(interval)
+//     }
+//   }, 1000);
+// }
+// count()
 
 // Количество баллов за задачу: 8
 
-// 4) Создать блок 150 на 150 пикселей и получить его через дом элементы при нажатии на которую будет меняться его задний фон при повторном нажатии будет убираться цвет заднего фона - выполните эту задачу с использованием classList и его методов
+// 4) Создать блок 150 на 150 пикселей и получить его через дом элементы при нажатии на которую будет меняться его задний фон при 
+// повторном нажатии будет убираться цвет заднего фона - выполните эту задачу с использованием classList и его методов
+
+const block = document.querySelector(".block")
+
+block.onclick = () => {
+  block.classList.toggle("active")
+}
 
 // Количество баллов за задачу: 9
 
