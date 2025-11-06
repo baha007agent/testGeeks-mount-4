@@ -33,10 +33,17 @@ setInterval(() => {
 
 // Пример функции:
 
-// const count = () => {
-//   let i = 1;
-//   const interval = setInterval( // Правильно продолжите... );
-// }
+const count = () => {
+  let i = 1;
+  const interval = setInterval(() => {
+    if (i <= 10) {
+      console.log(i++);
+    } else {
+      clearInterval(interval)
+    }
+  }, 1000);
+}
+count()
 
 // Количество баллов за задачу: 8
 
